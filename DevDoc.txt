@@ -105,3 +105,7 @@ com.sb.revolt.io.ReadTextFile.java
 		
 	readFile(args = String, return = String[])
 		Returns the lines of the specified file as a String Array. Use this one.
+		Used like 	public String[] getNames() throws IOException
+				{
+					return ReadTextFile.readFile(path_0);
+				}
