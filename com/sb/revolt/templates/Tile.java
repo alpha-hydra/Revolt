@@ -45,6 +45,12 @@ public class Tile
 		return this.YPos;
 	}
 	
+	public int[] getXYPos()
+	{
+		int[] temp = {this.XPos, this.YPos};
+		return temp;
+	}
+	
 	public double getLoyaltyGovernment()
 	{
 		return this.loyaltyGovernment;
@@ -60,7 +66,7 @@ public class Tile
 		return this.contentness;
 	}
 	
-	public boolean getController(String controller)
+	public boolean isControlledBy(String controller)
 	{
 		if (controller == "Rebels" && this.controlled)
 		{
@@ -103,6 +109,42 @@ public class Tile
 		{
 			this.features[i] = newFeatures[i];
 		}
+	}
+	
+	public int coup()
+	{
+		/* -1 = Error
+		 *  0 = You already control this
+		 * 1 = You gain control
+		 * 2 = You don't gain control
+		 */
+		if (!controlled && this.loyaltyGovernment > this.loyaltyRebels)
+		{
+			return 2;
+		}
+		else if (controlled)
+		{
+			return 0;
+		}
+		else if (!controlled && this.loyaltyGovernment < this.loyaltyRebels)
+		{
+			controlled = true;
+			return 1;
+		}
+		else return -1;
+	}
+	
+	public void changeLoyalty(String faction, double change)
+	{
+		if (faction == "Government")
+		{
+			this.loyaltyGovernment = this.loyaltyGovernment + change;
+		}
+		else if (faction == "Rebels")
+		{
+			this.loyaltyRebels = this.loyaltyRebels + change;
+		}
+		
 	}
 
 }
