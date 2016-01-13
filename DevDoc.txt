@@ -96,3 +96,12 @@ com.sb.revolt.templates.Tile.java
 
 	changeLoyalty(args = String; double, return = void)
 		Changes the specified faction's loyalty by the specified amount.
+
+com.sb.revolt.io.ReadTextFile.java
+	Contains stuff to read from text files.
+	
+	OpenFile(args = none, return = String[])
+		Returns the lines of the file in the String Array. Don't use this. Ever.
+		
+	readFile(args = String, return = String[])
+		Returns the lines of the specified file as a String Array. Use this one.
