@@ -50,7 +50,7 @@ public class ReadTextFile
 		return numberOfLines;
 	}
 	
-	public String[] readFile(String path) throws IOException
+	public static String[] readFile(String path) throws IOException
 	{
 		String[] contents = null;
 		try
