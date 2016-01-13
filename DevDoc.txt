@@ -1,0 +1,98 @@
+REVOLT DEVELOPER DOCUMENTATION
+
+com.sb.revolt.main.Main.java
+	The main file in the program. This file launches the game.
+
+	main(args = String[], return = void)
+		Initialises the game. Put everything that needs to load in here. Takes an array of strings as command line arguments.
+
+
+com.sb.revolt.rnjesus.NameGenerator.java
+	Contains methods to generate names based on certain criteria
+	
+	generateName(args = String, return = String)
+		Generates a random name of the specified gender, and returns it as a string.
+
+	generateDictatorName(args = String, return = String)
+		Generates a random name with a title of the specified gender and returns it as a string.
+
+
+com.sb.revolt.run.GeneratePeople.java
+	Will generate the People of Interest, currently just prints names.
+
+	init(args = void, return = void)
+		Randomly generates a name, using the methods in NameGenerator, then prints to the console.
+
+
+com.sb.revolt.run.GenerateWorld.java
+	Used to generate the world.
+	
+	init(args = void, return = void)
+		Initialises the map.
+
+	getTileByXY(args = int; int, return = Tile)
+		Takes the two integers X and Y, finds the tile in that position, and returns it.
+
+
+com.sb.revolt.templates.PersonOfInterest.java
+	The basic class for People of Interest. Will add child classes for specific PoIs. If no boolean is provided in the constructor, assumed to be false.
+
+	PersonOfInterest[Class Constructor]
+		String, String, int, int, double, double, boolean, double
+
+	PersonOfInterest[Class Constructor]
+		String, String, int, int, double, double, double
+
+	getPosition(args = void, return = Tile)
+		Returns the tile the PoI is currently on.
+
+	isSympathetic(args = void, return = boolean)
+		Returns true if sympathetic to the revolution, false otherwise.
+
+	getTrustworthiness(args = void, return = double)
+		Returns the trustworthiness of the PoI.
+
+	convinceToJoin(args = void, return = int)
+		Tries to convince the PoI to become sympathetic. Returns 0 if already sympathetic, 1 if you fail, 2 if you succeed and -1 on an error.
+
+
+com.sb.revolt.templates.Tile.java
+	The class for tiles. Holds all the information about a tile, and contains many methods to interact with them.
+
+	Tile[Class Constructor]
+		int, int, double, double, double, boolean, int, int[]
+		Prints to console when initialised successfully.
+
+	getXPos(args = void, return = int)
+		Returns the X Position of the tile.
+
+	getYPos(args = void, return = int)
+		Returns the Y Position of the tile.
+
+	getXYPos(args = void, return = int[])
+		Returns the X and Y position of the tile as an array.
+
+	getLoyaltyGovernment(args = void, return = double)
+		Returns the Government Loyalty of the tile.
+
+	getLoyaltyRebels(args = void, return = double)
+		Returns the Rebel Loyalty of the tile.
+
+	getContentness(args = void, return = double)
+		Returns the contentness of the tile.
+
+	isControlledBy(args = String, return = boolean)
+		Returns true if the specified faction controlls the tile.
+
+	getTerrain(args = void, return = int)
+		Returns an integer relating to the terrain of the tile.
+
+	setFeatures(args = int[], return = void)
+		Wipes the tile's features, then rewrites them to the argument
+		//Will rewrite how this is done, so this is just temporary.
+
+	coup(args = void, return = int)
+		Tries to overthrow the Tile. Returns 0 if already controlled, 1 if you fail, 2 if you succeed and -1 on an error.
+
+	changeLoyalty(args = String; double, return = void)
+		Changes the specified faction's loyalty by the specified amount.
