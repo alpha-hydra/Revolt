@@ -1,6 +1,6 @@
 Revolt v0.1
 
-Premise:
+<b>Premise</b>:
 	Game takes place in a region represented by a grid that shows various areas, each with their 	
 	own detailed points of interest and stats. The player is leading a resistance against a corrupt 
 	government, with many things to take into consideration.
