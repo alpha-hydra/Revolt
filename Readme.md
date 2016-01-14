@@ -1,17 +1,17 @@
 Revolt v0.1
 
-<b>Premise:</b>\n
+<b>Premise:</b>
 Game takes place in a region represented by a grid that shows various areas, each with their 	
 own detailed points of interest and stats. The player is leading a resistance against a corrupt 
 government, with many things to take into consideration.
 
-<b>Objective:</b>\n
+<b>Objective:</b>
 The primary objective for the player is to overthrow the government which requires several
 prerequisites. In order to preform the operation to throw out the government, the player must
 control 80%> of the map. In order to control a tile, the player must complete an operation
 which is unlocked by having more support than the government in that tile.
 
-<b>Operations:</b>\n
+<b>Operations:</b>
 The primary way of interacting with the game is preforming operations to achieve various
 objectives. The most important are Coups, a coup is an operation that will have the
 requirement of having more support than the government in the tile a coup is being
@@ -40,7 +40,7 @@ Each operation requires the assignment of an Agent to lead it, and then any othe
 additions to improve chances/change outcome. There is also a cost to start the operation
 which will vary from Operation to Operation.
 
-<b>Values:</b>\n
+<b>Values:</b>
 Each tile has multiple values representing various aspects of the current situation. The two
 most obvious ones are the Support Factors. The populace in any given tile will have two
 values showing how much they support each of the factions. The initial value is around 75%
@@ -63,7 +63,7 @@ operation is failed and increases when an operation is successful. Morale effect
 successful some operations will be. If the resistance reaches 0% Morale, they give up and
 the revolution fails.
 
-<b>Resources:</b>\n
+<b>Resources:</b>
 Money is the most common resource and is used in almost every operation. It is invested at
 the start and sometimes has more rewards, or is exchanged for something else. The player
 starts with X amount.
@@ -79,7 +79,7 @@ Supplies covers both medical supplies, and food. Supplies are slowly consumed ov
 They can be used to heal agents faster, and in various operations. If supplies run out, then 
 morale drops rapidly until supplies are reacquired. 
 
-<b>Agents:</b>\n
+<b>Agents:</b>
 Agents are particularly useful operatives that help you directly with operations. While
 supporters represent the general population helping with the revolution, agents represent
 leaders, spies, fighters or anyone who is important in leading the rebellion. Agents will
@@ -93,11 +93,11 @@ to this room, they will reduce the overall time of an operation dependent on the
 intelligence. Agents can be required in many ways, such as random encounters, operations,	
 recruited, bribed.
 
-<b>Hideout:</b>\n
+<b>Hideout:</b>
 The hideout is the resistance headquarters. Here the player manages resources, agents, 
 current operations, personalization. It basically acts like a menu screen to keep track of 
 everything.
 
-<b>Tiles:</b>\n
+<b>Tiles:</b>
 Each tile will have various additional bits of information that make a difference to anything
 that would effect it. These include terrain, population, notable people, notable buildings etc.     
